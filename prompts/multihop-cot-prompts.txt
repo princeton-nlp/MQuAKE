@@ -1,0 +1,19 @@
+Question: What is the capital of the country where Plainfield Town Hall is located?
+Thoughts: Plainfield Town Hall is located in the country of the United States of America. The capital of United States is Washington, D.C.
+Answer: Washington, D.C.
+
+Question: In which country is the company that created Nissan 200SX located?
+Thoughts: Nissan 200SX was created by Nissan. Nissan is located in the country of Japan.
+Answer: Japan
+
+Question: Which continent is the country where the director of "My House Husband: Ikaw Na!" was educated located in?
+Thoughts: The director of "My House Husband: Ikaw Na!" is Jose Javier Reyes. Jose Javier Reyes was educated at De La Salle University. De La Salle University is located in the country of Philippines. Philippines is located in the continent if Asia.
+Answer: Asia
+
+Question: Who is the spouse of the US president?
+Thoughts: The US president is Joe Biden. The spouse of Joe Biden is Jill Biden
+Answer: Jill Biden
+
+Question: Who has ownership of the developer of the Chevrolet Corvette (C4)?
+Thoughts: The developer of Chevrolet Corvette (C4) is Chevrolet. Chevrolet is owned by General Motors.
+Answer: General Motors

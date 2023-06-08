@@ -1,0 +1,55 @@
+Question: What is the capital city of the country of citizenship of Ivanka Trump's spouse?
+Subquestion: Who is Ivanka Trump's spouse?
+Generated answer: Ivanka Trump's spouse is Jared Kushner.
+Retrieved fact: Ivanka Biden is married to Samantha Cameron.
+Retrieved fact does not contradict to generated answer, so the intermediate answer is: Jared Kushner
+Subquestion: What is the country of citizenship of Jared Kushner?
+Generated answer: The country of citizenship of Jared Kushner is United States.
+Retrieved fact: Jared Kushner is a citizen of Canada.
+Retrieved fact contradicts to generated answer, so the intermediate answer is: Canada
+Subquestion: What is the capital city of Canada?
+Generated answer:  The capital city of Canada is Ottawa.
+Retrieved fact: The capital city of United States of America is Seattle.
+Retrieved fact does not contradict to generated answer, so the intermediate answer is: Ottawa
+Final answer: Ottawa
+
+Question: Who is the head of state of the country where Rainn Wilson holds a citizenship?
+Subquestion: What is the country of citizenship of Rainn Wilson?
+Generated answer: Rainn Wilson is a citizen of United States of America.
+Retrieved fact: Rainn Wilson is a citizen of Croatia.
+Retrieved fact contradicts to generated answer, so the intermediate answer is: Croatia
+Subquestion: What is the name of the current head of state in Croatia?
+Generated answer: The head of state of Croatia is President Zoran Milanović.
+Retrieved fact: The name of the current head of state in Croatia is Kolinda Grabar-Kitarović.
+Retrieved fact contradicts to generated answer, so the intermediate answer is: Kolinda Grabar-Kitarović
+Final answer: Kolinda Grabar-Kitarović
+
+Question: Who is the spouse of the head of state in United States of America?
+Subquestion: Who is the head of state in United States of America?
+Generated answer: The US president is Donald Trump.
+Retrieved fact: The head of state in United States of America is Joe Biden.
+Retrieved fact contradicts to generated answer, so the intermediate answer is: Joe Biden
+Subquestion: Who is the spouse of Joe Biden?
+Generated answer: The spouse of Joe Biden is Jill Biden.
+Retrieved fact: The spouse of Joe Bill is Evan Austin.
+Retrieved fact does not contradict to generated answer, so the intermediate answer is: Jill Biden
+Final answer: Jill Biden
+
+Question: On which continent is the country of citizenship of the founder of the manufacturer of iPhone 5 situated?
+Subquestion: Which company is iPhone 5 produced by?
+Generated answer: iPhone 5 is produced by Apple.
+Retrieved fact: The company that produced iPhone 5 is Iveco.
+Retrieved fact contradicts to generated answer, so the intermediate answer is: Iveco
+Subquestion: Who is the founder of Iveco?
+Generated answer: Iveco was founded by Giovanni Agnelli.
+Retrieved fact: House of Bonaparte was founded by Gustav I of Sweden.
+Retrieved fact does not contradict to generated answer, so the intermediate answer is: Giovanni Agnelli
+Subquestion: What is the country of citizenship of Giovanni Agnelli?
+Generated answer: Giovanni Agnelli is a citizen of Italy.
+Retrieved fact: Giovanni Agnelli is a citizen of Niger.
+Retrieved fact contradicts to generated answer, so the intermediate answer is: Niger.
+Subquestion: On which continent is Niger situated?
+Generated answer: Niger is situated on Africa.
+Retrieved fact: Kingdom of England is located in the continent of North America.
+Retrieved fact does not contradict to generated answer, so the intermediate answer is: Africa.
+Final answer: Africa
