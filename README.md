@@ -108,8 +108,7 @@ We propose a simple but effective method MeLLo, which (1) decomposes a multi-hop
 
 <img src="figs/MeLLo.png" width="800">
 
-The in-context-learning examples we used in MeLLo can be founded in `prompts/MeLLo-prompts.txt`. We will add a notebook demo to run MeLLo on OpenAI GPT soon.
-
+The in-context-learning examples we used in MeLLo can be founded in `prompts/MeLLo-prompts.txt`. 
 A python notebook for running MeLLo on `text-davinci-003` is here: [`run_mello.ipynb`](https://github.com/princeton-nlp/MQuAKE/blob/main/run_mello.ipynb).
 
 ## Bugs or Questions?
