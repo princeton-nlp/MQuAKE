@@ -87,6 +87,9 @@ The dataset is saved as a list of dicts, each of which represents a data instanc
     * `triples_labeled` and `new_triples_labeled`: the list of labeled fact triples.
     * `edited_triples`: the list of edited facts `(s, r, o*)` that we want to inject into language models.
 
+*For MQuAKE-T only*:
+* `answer_extended`: the extended gold answers **before** injecting new facts into language models. We extend the pre-edit gold answer for MQuAKE-T to minimize the effects of mismatch of the LM training corpus and our Wikidata dump. This includes other possible gold answers besides the one we extract from our Wikidata dump (see Appendix E of our paper).
+
 ## Evaluation
 There are many ways to check whether a fact is stored in a language model or not, e.g., cloze-style statement vs question, in-context-learning vs zero-shot prompting, CoT vs standard prompting. 
 
