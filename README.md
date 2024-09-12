@@ -10,68 +10,75 @@ Please see [our paper](https://arxiv.org/pdf/2305.14795.pdf) for more details.
 
 <img src="figs/main-model-edit.png" width="400">
 
+
+**[2024/9 Update]** 
+We have resolved a knowledge conflict issue in the original `MQuAKE-CF-3k` dataset. We updated this subset in `datasets/MQuAKE-CF-3k-v2.json` and updated results in our paper. We recommend future researchers follow
+this setting as wel. 
+
+
 ## Datasets
 
 ### Overview 
 MQuAKE includes a dataset MQuAKE-CF based on counterfactual edits, and another dataset MQuAKE-T of temporal knowledge updates to evaluate model editors on real-world changes.
 
 The datasets are included in `datasets/`. There are three files:
-* `MQuAKE-CF-3k.json`: a counterfactual dataset containing 3,000 instances (1,000 for {2,3,4}-hop questions). The results shown in our current paper are based on this dataset (as mentioned in the footnote 2 of the paper).
+* `MQuAKE-CF-3k-v2.json`: a counterfactual dataset containing 3,000 instances. The results shown in our current paper are based on this dataset (as mentioned in the footnote 2 of the paper).
 * `MQuAKE-CF.json`: the full counterfactual dataset containing 9,218 instances.
 * `MQuAKE-T.json`: the temporal-based dataset containing 1,825 instances. This is designed to evaluate knowledge editing methods on real-world changes.
+* `MQuAKE-CF-3k.json`: the first version of `MQuAKE-CF-3k`, where there could be knowledge conflict when conducting multi-edit experiments. 
 
 ### Data format
 The dataset is saved as a list of dicts, each of which represents a data instance. An example in `MQuAKE-CF` is shown below.
 
 ```
 {
-  "case_id": 2500,
+  "case_id": 1561,
   "requested_rewrite": [
     {
-      "prompt": "{} is a citizen of",
-      "relation_id": "P27",
-      "target_new": {"str": "Libya", "id": "Q1016"},
-      "target_true": {"str": "United States of America", "id": "Q30"},
-      "subject": "Vince McMahon",
-      "question": "What is the country of citizenship of Vince McMahon?"
+      "prompt": "{} is associated with the sport of",
+      "relation_id": "P641",
+      "target_new": {"str": "cricket", "id": "Q5375"},
+      "target_true": {"str": "association football", "id": "Q2736"},
+      "subject": "Dudley Town F.C.",
+      "question": "Which sport is Dudley Town F.C. associated with?"
     },
     ...
   ],
   "questions": [
-    "What city serves as the capital of the country where the CEO of Triple H holds citizenship?",
-    "In which city is the capital of the country where the chief executive officer of Triple H is a citizen?",
-    "What is the name of the capital city of the country where the CEO of Triple H is a citizen?"
+    "What is the capital of the country where Dudley Town F.C.'s sport originated?",
+    "Which city serves as the capital of the country where the sport played by Dudley Town F.C. originated?",
+    "Which city is the capital of the country where the sport of Dudley Town F.C. was created?"
   ],
-  "answer": "Washington, D.C.",
-  "answer_alias": ["Washington", ...],
-  "new_answer": "Franklin",
-  "new_answer_alias": ["Franklin, Kentucky", ...],
+  "answer": "London",
+  "answer_alias": ["London UK", ...],
+  "new_answer": "Oderzo",
+  "new_answer_alias": [],
   "single_hops": [
     {
-      "question": "Who is the employer of Triple H?",
-      "cloze": "Triple H is employed by",
-      "answer": "WWE",
-      "answer_alias": ["World Wrestling Federation", ...]
+      "question": "Which sport is Dudley Town F.C. associated with?",
+      "cloze": "Dudley Town F.C. is associated with the sport of",
+      "answer": "association football",
+      "answer_alias": ["football", ...]
     },
     ...
   ],
   "new_single_hops": [...],
   "orig": {
     "triples": [
-      ["Q44567", "P108", "Q35339"],
-      ["Q35339", "P169", "Q44430"],
-      ["Q44430", "P27", "Q30"],
-      ["Q30", "P36", "Q61"]
+      ["Q5311995", "P641", "Q2736"],
+      ["Q2736", "P495", "Q21"],
+      ["Q21", "P36", "Q84"]
     ],
     "triples_labeled": [
-      ["Triple H", "employer", "WWE"],
+      ["Dudley Town F.C.", "sport", "association football"],
       ...,
     ],
     "new_triples": [...,],
     "new_triples_labeled": [...,],
     "edit_triples": [
-      ["Q44430", "P27", "Q1016"],
-      ["Q1016", "P36", "Q1778943"]
+      ["Q5311995", "P641", "Q5375"],
+      ["Q5375", "P495", "Q408"],
+      ...
     ]
   }
 }
